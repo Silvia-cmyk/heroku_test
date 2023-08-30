@@ -6,6 +6,7 @@ import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 import {View, Image, StyleSheet, TextInput} from 'react-native';
 
+//one version
 // 定義測驗題目數據，每個問題包含 question、options；移至另外的js檔省空間
 
 
