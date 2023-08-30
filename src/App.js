@@ -11,6 +11,7 @@ import {View, Image, StyleSheet, TextInput} from 'react-native';
 
 
 function App() {
+<<<<<<< HEAD
   const particlesInit = useCallback(async engine => {
         console.log(engine);
         // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
@@ -182,6 +183,45 @@ function App() {
         setCurrentQuestion(currentQuestion + 1);
       } else {
         console.log('All answers submitted');
+=======
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [userAnswers, setUserAnswers] = useState([]);
+      // 處理選擇答案的事件，將答案添加到 userAnswers 中，並呼叫 submitAnswer 和 handleNextQuestion 函數
+      const handleAnswerSelect = (selectedOption) => {
+        setUserAnswers([...userAnswers, selectedOption]);
+        submitAnswer(selectedOption);
+        handleNextQuestion();
+      };
+  
+      // 處理下一題的事件，更新當前題目狀態
+      const handleNextQuestion = () => {
+        if (currentQuestion < questions.length - 1) {
+          setCurrentQuestion(currentQuestion + 1);
+        } else {
+          console.log('All answers submitted');
+        }
+      };
+  
+    // 處理提交答案的事件，將答案提交到後端處理（選擇題）
+    const submitAnswer = async (selectedOption) => {
+      try {
+        const response = await fetch('https://fasiapi-python-a8fc75911008.herokuapp.com/submit-data', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ answer: selectedOption }),
+        });
+  
+        // 根據請求的響應處理結果
+        if (response.ok) {
+          console.log('Answer submitted successfully');
+        } else {
+          console.error('Error submitting answer');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+>>>>>>> origin/master
       }
     };
 
