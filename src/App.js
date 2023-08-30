@@ -25,7 +25,7 @@ function App() {
     // 處理提交答案的事件，將答案提交到後端處理（選擇題）
     const submitAnswer = async (selectedOption) => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/submit-data', {
+        const response = await fetch('https://temp-questions-570025b2c58b.herokuapp.com/submit-data', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
