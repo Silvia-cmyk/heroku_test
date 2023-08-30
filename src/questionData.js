@@ -51,9 +51,9 @@ const questions = [
     correctAnswer: 'd.以上皆是'
     },
     {
-    question: '我最愛歌曲是哪一首？',
-    options: ['a.人間-王菲','b.大魚-周深','c.Forever young-朴樹','d.以上皆是'],
-    correctAnswer: 'd.以上皆是'
+    question: '數字：79150101，倒過來乘以2並加30為多少？',
+    options: ['a.20230503','b.20230719','c.20210424','d.20220404'],
+    correctAnswer: 'c.20210424'
     },
     {
     question: '我的星座是什麼？',
@@ -71,8 +71,13 @@ const questions = [
     correctAnswer: ''
     },
     {
-    question: '曾經你提過要一起去到水族館參觀，如果去到了水族館你最想看的是哪一種海洋生物表演？',
-    options: ['a.水母','b.海豚','c.企鵝','d.熱帶魚'],
+    question: '這是一串凱撒密碼:Dtz xnruqd fwj ymj gjxy. Mfaj ymj gjxy gnwymifd，其中每個字母都已經向後移動了五位，所以解密的答案是？',
+    options: ['a.You can\'t connect the dots looking forward; you can only connect them looking backwards.你無法預先把點點滴滴串連起來；只有在未來回顧時，你才會明白那些點點滴滴是如何串在一起的。','You simply are the best. Have the best birthday.你是最棒的。願你度過最棒的生日。','The darkness is no darkness with thee.有了你，黑暗不再是黑暗。'],
+    correctAnswer: 'You simply are the best. Have the best birthday.你是最棒的。願你度過最棒的生日。'
+    },
+    {
+    question: '最後一題',
+    options: ['不顯示'],
     correctAnswer: ''
     },
     
