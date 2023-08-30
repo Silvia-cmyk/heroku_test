@@ -76,7 +76,7 @@ function App() {
   const handleSubmission = async () => {
     // 將輸入框的值提交至後端
     try {
-      const response = await fetch('http://127.0.0.1:8000/submit-data', {
+      const response = await fetch('https://fasiapi-python-a8fc75911008.herokuapp.com/submit-data', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
