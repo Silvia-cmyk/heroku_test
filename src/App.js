@@ -3,7 +3,6 @@ import questions from "./questionData";
 import './App.css'
 import Button from '@mui/material/Button';
 import {View, Image, StyleSheet, TextInput} from 'react-native';
-import ParticlesBackground from './particleBackground';
 // 定義測驗題目數據，每個問題包含 question、options；移至另外的js檔省空間
 
 
@@ -96,7 +95,6 @@ function App() {
   };
   return (
     <div>
-      <ParticlesBackground/>
       <div className="quiz-container">
       {/* 判斷是否還有問題未作答 */}
       {currentQuestion < questions.length -1 ? (
